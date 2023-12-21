@@ -8,20 +8,33 @@ body{
     background-color: aqua;
     display: flex;
     justify-content: center;
-    align-items: ;
-    
     margin-top: 10px;
 }
-
 .container{
     text-align: center;
 }
 .gameboard{
     width: 500px;
     height: 350px;
-    border: 1px solid black;
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: none;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.square{
+    margin: auto;
+    border: 4px solid rgb(214, 115, 115);
+    justify-content: center;
+    font-size: 80px;
+    text-align: center;
+    background-color: white;
+    height: 130px;
+    width: 130px;
+    background: linear-gradient(135deg, #5b548a, #00feba);
 }
 button{
     padding: 5px;
