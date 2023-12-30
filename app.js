@@ -94,5 +94,36 @@ const game = (() => {
     }
 })();
 
+function checkForWin(board){
+    const winningCombination = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 3, 6],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ]
+    for (let i =  0; i< winningCombination.length; i++) {
+        const [a, b, c] = winningCombination[i];
+        if (board[a] && board[a] === board[b] & board[a] === board[c]){
+            return true;
+        }
+    } 
+        return false; 
+}
+function checkForTie(board) {
+    return board.every(cell => cell !== '')
+}    
 
+const restartButton = document.querySelector('#restart-btn');
+restartButton.addEventListener('click', ()=> {
+    game.restart();
+   
+})
 
+const startButton = document. querySelector('#start-btn');
+startButton.addEventListener('click', () => {
+    game.start();
+})
