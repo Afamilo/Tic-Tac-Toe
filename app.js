@@ -28,6 +28,13 @@ const Gameboard =(() =>{
         gameboard[index] = value;
         render();
     }
+    const getGameboard = () => gameboard;
+
+return {
+    render,
+    update,
+    getGameboard
+}
 
    
 })();
